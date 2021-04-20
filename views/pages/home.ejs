@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('./layout/header.ejs')%>
+
+        <main>
+            <%DATA.forEach(element=>{%>
+                <div class="card">
+                    <p>character:
+                        <%=element.character%>
+                    </p>
+                    <p>image:
+                        <%=element.image%>
+                    </p>
+                    <p>qoute:
+                        <%=element.quote%>
+                    </p>
+                    <p>character Direction:
+                        <%=element.characterDirection%>
+                    </p>
+                </div>
+                <form action="/getQoute" method="POST">
+                    <label for="search">search</label><br>
+                    <input type="text" name="search"><br>
+                    <button type="submit">search qoute</button>
+                </form>
+
+                <%})%>
+        </main>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+body {
+    background-color: aqua;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgb(52, 136, 136);
+}
+
+button {
+    border: 2px solid rgb(167, 163, 156);
+    text-align: center;
+    background-color: rgb(52, 136, 136);
+    color: yellow;
+}
+
+h1 {
+    color: yellow;
+    font-family: 'Architects Daughter', cursive;
+}

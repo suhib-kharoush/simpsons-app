@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include('./layout/header.ejs')%>
+        <main>
+            <%DATA.forEach(element=>{%>
+
+                <div class="card">
+                    <%=element.character%>
+                        <%=element.quote%>
+                            <%=element.image%>
+
+
+                                <form action="/favorite-quotes/<%=element.qoute_id%>?_method=delete" method="POST">
+
+                                    <button>delete</button>
+                                    <button>update</button>
+                                </form>
+
+                </div>
+
+
+
+
+
+                <%})%>
+        </main>
+</body>
+
+</html>
