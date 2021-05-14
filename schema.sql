@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS simpson(
-    quote_id SERIAL PRIMARY KEY,
-    quote VARCHAR(255),
+    id SERIAL PRIMARY KEY,
+    quote TEXT,
     character VARCHAR(255),
-    image  varchar(55) NOT NULL,
+    image  TEXT,
     characterDirection VARCHAR(255)
-)
+);

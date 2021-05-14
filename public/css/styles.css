@@ -1,0 +1,34 @@
+main {
+    margin-top: 100px;
+    background-color: #62C8E4;
+    justify-content: space-around;
+}
+
+.card {
+    font-family: sans-serif;
+    background-color: #16a085;
+    width: 300px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: inline-flex;
+}
+
+.nav {
+    font-family: sans-serif;
+    margin-top: -60px;
+    float: right;
+}
+
+h1 {
+    font-family: sans-serif;
+    display: table-caption;
+    color: yellow;
+}
+
+header {
+    background-color: #16a085;
+}
+
+body {
+    background-color: #62C8E4;
+}

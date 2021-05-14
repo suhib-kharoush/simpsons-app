@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <%simp.forEach(simpson=>{%>
+            <section>
+                <p>
+                    <%=simpson.quote%>
+                </p>
+                <p>
+                    <%=simpson.character%>
+                </p>
+                <img src="<%=simpson.image%>">
+                <p>
+                    <%=simpson.characterDirection%>
+                </p>
+
+                <form action="/favorite-quotes/<%=simpson.id%>?_method=PUT" method="POST">
+                    <input type="text" name="quote" value="<%=simpson.quote%>">
+                    <input type="text" name="character" value="<%=simpson.character%>">
+                    <input type="text" name="image" value="<%=simpson.image%>">
+                    <input type="text" name="characterDirection" value="<%=simpson.characterDirection%>">
+                    <button type="submit">update simpson</button>
+
+                </form>
+
+                <form action="/favorite-quotes/<%=simpson.id%>?_method=DELETE" method="POST">
+                    <button type="submit">delete simpson</button>
+                </form>
+                <%})%>
+    </main>
+</body>
+
+</html>
